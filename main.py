@@ -40,28 +40,27 @@ result_list = ["Underweight", "Normal weight", "Overweight", "Obesity"]
 screen = tkinter.Tk()
 screen.title("BMI Calculator")
 screen.geometry("250x330")
-screen.configure(bg="white")
 
-weight_text = tkinter.Label(bg="white",fg="black", text="Enter Your Weight (kg)")
+weight_text = tkinter.Label(screen,text="Enter Your Weight (kg)")
 weight_text.pack(pady=10)
 
-weight_input = tkinter.Spinbox(bg="white", fg="black", from_=30, to=180, width=3)
+weight_input = tkinter.Spinbox(screen,from_=30, to=180, width=3)
 weight_input.pack(pady=10)
 weight_input.focus()
 
-height_text = tkinter.Label(bg="white",fg="black", text="Enter Your Height (cm)")
+height_text = tkinter.Label(screen, text="Enter Your Height (cm)")
 height_text.pack(pady=10)
 
-height_input = tkinter.Spinbox(bg="white", fg="black", from_=140, to=220, width=3)
+height_input = tkinter.Spinbox(screen, from_=140, to=220, width=3)
 height_input.pack(pady=10)
 
-calculate_button = tkinter.Button(text="CALCULATE", command=click_calculate_button,bg="white", fg="black")
+calculate_button = tkinter.Button(screen,text="CALCULATE", command=click_calculate_button)
 calculate_button.pack(pady=10)
 
-result_text = tkinter.Label(bg="white",fg="black", text="Result : ")
+result_text = tkinter.Label(screen, text="Result : ")
 result_text.pack(pady=10)
 
-ideal_weight_text = tkinter.Label(bg="white",fg="black", text="Ideal Weight : ")
+ideal_weight_text = tkinter.Label(screen, text="Ideal Weight : ")
 ideal_weight_text.pack()
 
 screen.mainloop()
